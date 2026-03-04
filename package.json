@@ -11,18 +11,7 @@
     "test:watch": "jest --watchAll --all",
     "service:up": "docker compose -f infra/compose.yaml up -d",
     "service:stop": "docker compose -f infra/compose.yaml stop",
-    "service:down": "docker compose -f infra/compose.yaml down"
-  },
-  "jest": {
-    "verbose": true,
-    "transform": {
-      "\\.[jt]sx?$": [
-        "babel-jest",
-        {
-          "excludeJestPreset": true
-        }
-      ]
-    }
+    "service:down": "docker compose -f infra/compose.yaml down -v"
   },
   "keywords": [],
   "author": "",
@@ -34,7 +23,6 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "babel-jest": "^30.2.0",
     "jest": "^30.2.0",
     "prettier": "^3.8.1"
   }
