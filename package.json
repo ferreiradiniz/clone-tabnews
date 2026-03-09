@@ -12,7 +12,7 @@
     "service:up": "docker compose -f infra/compose.yaml up -d",
     "service:stop": "docker compose -f infra/compose.yaml stop",
     "service:down": "docker compose -f infra/compose.yaml down -v",
-    "migration:create": "node-pg-migrate -m infra/migrations create createMigration",
+    "migration:create": "node-pg-migrate -m infra/migrations create",
     "migration:up": "node-pg-migrate -m infra/migrations --envPath .env.development up",
     "migrate": "node-pg-migrate -m infra/migrations"
   },
@@ -20,6 +20,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv-expand": "^11.0.6",
     "next": "^15.5.12",
     "pg": "^8.11.3",
     "react": "^18.2.0",
@@ -28,7 +29,7 @@
   "devDependencies": {
     "dotenv": "^17.3.1",
     "jest": "^30.2.0",
-    "prettier": "^3.8.1",
-    "node-pg-migrate": "^6.2.2"
+    "node-pg-migrate": "^6.2.2",
+    "prettier": "^3.8.1"
   }
 }
